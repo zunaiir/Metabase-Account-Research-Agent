@@ -355,10 +355,19 @@ Tasks:
    - describe it clearly
    - explain why it matters for Metabase
 4. Score ICP fit from 1 to 4:
-   - 1 = weak fit
-   - 2 = possible fit
-   - 3 = good fit
-   - 4 = strong fit
+
+- 1 = weak fit
+  Little evidence of analytics maturity, reporting needs, or a plausible Metabase use case.
+
+- 2 = possible fit
+  Some general relevance, but weak or limited evidence of a real reporting, dashboarding, or analytics need.
+
+- 3 = good fit
+  Clear ICP alignment based on industry, product type, team structure, or likely reporting needs, even if timing signals are limited.
+
+- 4 = strong fit
+  Strong ICP alignment plus credible evidence of growing analytics complexity, multi-team reporting needs, embedded analytics potential, or meaningful signals that suggest Metabase could be relevant now.
+
 5. Explain ICP reasoning briefly.
 6. Explain whether there is a credible reason to prioritize outreach now, based on the available signals.
 7. Generate:
@@ -401,6 +410,12 @@ Rules:
 - be skeptical, not optimistic
 - if evidence is weak, say so clearly
 - if there is no clear timing trigger, say that instead of inventing urgency
+- separate ICP fit from urgency: a company can be a strong fit even if the why-now signal is weaker
+- do not require explicit mention of BI tools or dashboards to assign a 3 or 4
+- you may infer a strong fit from company type, product complexity, likely internal reporting needs, and embedded analytics relevance
+- modern B2B SaaS, developer tools, fintech, ecommerce, and product-led technology companies with credible analytics use cases should often score at least a 3
+- developer tools, product-led SaaS, and modern software companies can be strong fits even without explicit public evidence of BI pain if the business likely depends on internal metrics, product usage reporting, or customer-facing insights
+- large companies should only score highly if there is a clear team-level, self-serve, or embedded analytics use case
 - keep output concise and practical
 - both emails should sound like a thoughtful AE, not a marketing sequence
 - keep each email under 110 words
