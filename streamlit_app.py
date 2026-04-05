@@ -541,6 +541,26 @@ Think like an experienced AE deciding which accounts are worth prioritizing.
 Do not just explain.
 
 Make a decision.
+
+FINAL SCORING CHECK:
+
+- After writing your reasoning, compare it to your score.
+
+- If you clearly describe:
+  - increasing complexity
+  - enterprise expansion
+  - multi-team usage
+  - growing reporting needs
+
+  then this is evidence of an active or emerging analytics problem.
+
+- In these cases, you should assign a 4.
+
+- Do NOT describe a real problem and then assign a 3.
+
+- Your score must match your reasoning.
+
+- If your explanation sounds like “they are growing into this problem,” the correct score is 4.
 """
 
 
