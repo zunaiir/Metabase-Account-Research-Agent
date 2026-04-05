@@ -413,6 +413,9 @@ Rules:
 - separate ICP fit from urgency: a company can be a strong fit even if the why-now signal is weaker
 - do not require explicit mention of BI tools or dashboards to assign a 3 or 4
 - you may infer a strong fit from company type, product complexity, likely internal reporting needs, and embedded analytics relevance
+- Product expansion, enterprise feature launches (e.g. RBAC, permissions, audit logs), and signs of increasing operational complexity should be treated as meaningful timing signals.
+- Do not limit "why now" to funding, hiring, or leadership changes.
+- If a company is clearly scaling product usage, teams, or enterprise capabilities, this can indicate emerging analytics and reporting challenges and may justify a score of 4.
 - modern B2B SaaS, developer tools, fintech, ecommerce, and product-led technology companies with credible analytics use cases should often score at least a 3
 - developer tools, product-led SaaS, and modern software companies can be strong fits even without explicit public evidence of BI pain if the business likely depends on internal metrics, product usage reporting, or customer-facing insights
 - large companies should only score highly if there is a clear team-level, self-serve, or embedded analytics use case
