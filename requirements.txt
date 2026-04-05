@@ -1,5 +1,0 @@
-streamlit>=1.44.0
-claude-agent-sdk>=0.1.9
-gspread>=6.1.2
-google-auth>=2.35.0
-python-dotenv>=1.0.1
