@@ -334,18 +334,17 @@ Metabase is strongest with companies that show one or more of these traits:
 - companies trying to give non-technical users easier access to data
 - businesses that may need embedded analytics, customer-facing dashboards, or internal reporting at scale
 - teams experiencing dashboard sprawl, inconsistent metrics, fragmented reporting, or bottlenecks around data access
-- companies hiring for analytics, data, BI, RevOps, or operations roles that suggest growing reporting needs
-- companies launching new products, expanding teams, or increasing operational complexity
-- companies that likely need a lighter, faster, and more flexible alternative to heavier BI tools
-- large companies ONLY when there is a clear team-level, self-serve, or embedded analytics use case
+- companies hiring for analytics, data, BI, RevOps, or operations roles
+- companies launching new products or expanding into enterprise
+- companies increasing operational or product complexity
 
 ---
 
 Metabase is generally a weaker fit for:
 - very small companies with little evidence of analytics maturity
-- businesses with no clear reporting, data, or dashboard needs
-- organizations with very limited internal data usage
-- large enterprises with highly mature, centralized BI stacks and no clear gap
+- businesses with no clear reporting or dashboard needs
+- organizations with minimal internal data usage
+- large enterprises with highly mature BI stacks and no clear gap
 
 ---
 
@@ -362,26 +361,26 @@ Tasks:
 
 3. For each signal:
    - describe it clearly
-   - explain why it matters specifically for Metabase
+   - explain why it matters for Metabase
 
 4. Determine ICP fit score from 1 to 4:
 
 - 1 = weak fit  
-  Little evidence of analytics maturity or a plausible Metabase use case
+  Little evidence of analytics maturity or a real use case
 
 - 2 = possible fit  
-  Some relevance, but weak or unclear reporting/analytics need
+  Some relevance but weak or unclear analytics need
 
 - 3 = good fit  
-  Strong ICP alignment based on company type, product, or likely data needs, but limited or unclear timing signal
+  Strong ICP alignment but no clear evidence of a current or emerging analytics challenge
 
 - 4 = strong fit  
-  Strong ICP alignment PLUS a credible reason the company is likely dealing with analytics or reporting challenges now
+  Strong ICP alignment AND credible evidence the company is dealing with or growing into analytics or reporting challenges
 
 5. Explain ICP reasoning clearly.
 
 6. Determine "why now":
-   - Is there a credible reason this company would be evaluating analytics/reporting solutions now?
+   - Is there a credible reason this company would be dealing with analytics or reporting challenges now?
 
 7. Generate:
    - account_summary
@@ -428,92 +427,120 @@ Rules:
 
 - be skeptical, not optimistic
 - if evidence is weak, say so clearly
-- separate ICP fit from urgency: a company can be a strong fit without being urgent
+- separate ICP fit from urgency
 
 ---
 
 CRITICAL SCORING RULES:
 
-- Do NOT require explicit mention of BI tools or dashboards to assign a 3 or 4
+- Do NOT require explicit mention of dashboards or BI tools to assign a 3 or 4
 
-- You may infer a strong fit from:
+- You may infer fit from:
   - company type
   - product complexity
   - likely internal reporting needs
   - embedded analytics potential
 
-- Modern B2B SaaS, developer tools, fintech, ecommerce, and product-led companies should often score at least a 3 unless there is evidence against it
+- Modern SaaS and developer tools companies should usually be at least a 3 unless there is evidence against it
 
-- Do NOT assume all modern SaaS companies are strong fits — distinguish between:
+- Do NOT assume all SaaS companies are strong fits
+  Distinguish between:
   (a) companies that use data
-  (b) companies that would benefit from Metabase specifically
+  (b) companies that need Metabase
 
 ---
 
 WHY NOW RULES:
 
-- "Why now" does NOT have to be tied to a single event (e.g. funding or hiring)
+- "Why now" does NOT need to be tied to a single event
 
-- Treat the following as VALID timing triggers:
+- Treat the following as VALID triggers:
   - product expansion
-  - enterprise feature launches (RBAC, permissions, audit logs, SSO, multi-team workflows)
+  - enterprise feature launches (RBAC, audit logs, permissions, SSO)
   - increasing operational complexity
   - scaling teams or platform usage
   - expansion into enterprise customers
 
-- Structural signals (not just events) can indicate emerging analytics challenges
+- Structural signals are as important as event-based signals
 
-- If a company is clearly growing into complexity, this can justify a 4
+- Do NOT downgrade to a 3 just because the trigger is gradual instead of urgent
 
-- Do NOT penalize a company for lacking a point-in-time trigger if strong structural signals exist
+- If a company is clearly growing into complexity, this is enough for a 4
 
-- Structural complexity can be as strong as event-driven triggers
+- Before assigning a score, ask:
+  “Is there a real reason this company is dealing with analytics challenges now?”
 
-- Before assigning a score, explicitly ask:
-  “Is there a real reason this company would be dealing with analytics/reporting challenges now?”
+- If you clearly describe a real analytics problem, strongly consider assigning a 4
 
 ---
 
 SCORING BEHAVIOR:
 
-- 3 = strong fit, weak or unclear timing  
-- 4 = strong fit + credible trigger (event OR structural)
+- 3 = strong fit, no clear problem yet  
+- 4 = strong fit + clear or emerging problem  
 
-- When in doubt:
-  - default to 3 if only ICP is strong
-  - assign 4 if BOTH ICP and timing (including structural signals) are strong
+- A trigger does NOT need to be urgent or recent
+
+- Do NOT hold back a 4 just because there is no single event
 
 ---
 
 EMAIL RULES:
 
-- emails should sound like a thoughtful AE, not marketing
-- keep each email under 110 words
-- avoid generic sales language
-- avoid overly polished or AI-sounding phrasing
+The emails should feel like they were written by a real person, not generated.
 
-- do NOT ask for a meeting, demo, or call
-- do NOT use phrases like:
-  - "open to a quick call"
-  - "book time"
-  - "schedule a demo"
+Each email must:
 
-- use soft CTAs instead:
-  - offer to share more detail
-  - ask if this is relevant
-  - offer an example or resource
-  - invite a lightweight reply
+- be under 90 words
+- use short paragraphs (1 to 2 sentences each)
+- be easy to scan
+- use simple, clear language (write like the reader is in high school)
+- sound natural and conversational
+- avoid corporate or sales clichés
+- avoid buzzwords
 
-- email_a → efficiency / speed angle  
-- email_b → governance / consistency angle
+Structure:
+
+- 2 to 4 short paragraphs
+- no long blocks of text
+
+Strict constraints:
+
+- ask only ONE question total
+- include at most ONE link (optional)
+- do NOT include multiple links
+- do NOT include attachments
+- do NOT use dashes or hyphenated phrases
+- do NOT sound scripted or overly polished
+
+Tone:
+
+- curious, not pushy
+- observational, not assumptive
+- grounded in the company’s situation
+
+CTA style:
+
+- soft and low pressure
+- examples:
+  - “happy to share more if helpful”
+  - “curious if this is something your team is thinking about”
+  - “can send an example if useful”
+
+Email intent:
+
+- email_a → focus on speed and ease of getting answers from data  
+- email_b → focus on consistency, clarity, and avoiding messy reporting  
 
 ---
 
 Final instruction:
 
-Think like an experienced AE prioritizing accounts.
+Think like an experienced AE deciding which accounts are worth prioritizing.
 
-Do not just explain — decide.
+Do not just explain.
+
+Make a decision.
 """
 
 
