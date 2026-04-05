@@ -34,8 +34,4 @@ streamlit run streamlit_app.py
 
 Share your Google Sheet with the service account email from your Google service account JSON.
 
-## Notes
 
-This version uses Bright Data search rather than MCP browser auth so it can run with just:
-- Bright Data API token
-- Bright Data SERP zone
