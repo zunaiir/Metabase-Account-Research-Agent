@@ -608,13 +608,6 @@ def render_output(result: Dict[str, Any], context: Optional[Dict[str, Any]] = No
     for source in result.get("sources", []):
         st.write(f"- {source}")
 
-    if context:
-        with st.expander("Research Context"):
-            st.json(context)
-    with st.expander("Raw JSON"):
-        st.json(result)
-
-
 def main() -> None:
     st.set_page_config(page_title=APP_TITLE, layout="wide")
     st.title(APP_TITLE)
