@@ -95,7 +95,3 @@ If you use Gmail:
 - create an app password for `SMTP_PASSWORD`
 - use the same Gmail address for `SMTP_SENDER_EMAIL`
 
-## Notes
-
-- This version uses the Bright Data MCP pattern from the demo repo you shared and keeps the logic one-account-at-a-time so the output is high quality.
-- If your deployment target does not support `npx`, you may need to switch this app to Bright Data remote MCP mode instead of stdIO mode.
