@@ -662,24 +662,6 @@ def main() -> None:
         "Enter one account, gather first-party website and public search signals, generate a Metabase-specific brief with Claude, email it to the requester, and log it to Google Sheets."
     )
 
-    with st.sidebar:
-        st.subheader("Required secrets")
-        st.code(
-            "\n".join(
-                [
-                    'ANTHROPIC_API_KEY="..."',
-                    'GOOGLE_SERVICE_ACCOUNT_JSON=\'{"type":"service_account",...}\'',
-                    'GOOGLE_SHEET_ID="..."',
-                    'SMTP_USERNAME="you@gmail.com"',
-                    'SMTP_PASSWORD="your_app_password"',
-                    'SMTP_SENDER_EMAIL="you@gmail.com"',
-                    'SMTP_HOST="smtp.gmail.com"',
-                    'SMTP_PORT="587"',
-                    'CLAUDE_MODEL="claude-sonnet-4-6"',
-                ]
-            ),
-            language="toml",
-        )
 
     requester_name = st.text_input("Requester name", placeholder="Zunair")
     requester_email = st.text_input("Requester email", placeholder="name@company.com")
