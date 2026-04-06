@@ -63,6 +63,179 @@ SIGNAL_KEYWORDS = {
     ],
 }
 
+# ── Metabase brand CSS ────────────────────────────────────────────────────────
+METABASE_CSS = """
+<style>
+/* ── Metabase colour palette ───────────────────────────────────────────────── */
+/* primary   #509EE3  •  hover    #2D86D9  •  dark-nav  #2D3748             */
+/* bg-light  #F9FBFC  •  bg-card  #FFFFFF  •  border    #E8EDEE             */
+/* text      #4C5773  •  caption  #8A9BB0  •  green     #84BB4C             */
+
+/* App shell */
+.stApp {
+    background-color: #F9FBFC;
+}
+
+/* Main content card */
+.main .block-container {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 1px 6px rgba(45, 55, 72, 0.10);
+    max-width: 1100px;
+}
+
+/* Page title */
+h1 {
+    color: #2D3748 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.3px;
+}
+
+/* Section headings */
+h2, h3 {
+    color: #2D3748 !important;
+    font-weight: 600 !important;
+}
+
+/* Body text & markdown */
+p, .stMarkdown p, label, .stMarkdown {
+    color: #4C5773 !important;
+}
+
+/* Caption / helper text */
+.stCaption, small {
+    color: #8A9BB0 !important;
+}
+
+/* ── Inputs ────────────────────────────────────────────────────────────────── */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border: 1.5px solid #E8EDEE !important;
+    border-radius: 6px !important;
+    color: #4C5773 !important;
+    background-color: #FFFFFF !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #509EE3 !important;
+    box-shadow: 0 0 0 3px rgba(80, 158, 227, 0.18) !important;
+    outline: none !important;
+}
+
+/* Input labels */
+.stTextInput label, .stTextArea label {
+    color: #2D3748 !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem;
+}
+
+/* ── Primary button ────────────────────────────────────────────────────────── */
+.stButton > button[kind="primary"],
+div[data-testid="stButton"] > button[kind="primary"] {
+    background-color: #509EE3 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    padding: 0.55rem 1.4rem !important;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: #2D86D9 !important;
+    box-shadow: 0 2px 8px rgba(80, 158, 227, 0.35) !important;
+}
+
+/* Secondary / default button */
+.stButton > button:not([kind="primary"]) {
+    border: 1.5px solid #509EE3 !important;
+    color: #509EE3 !important;
+    background-color: #FFFFFF !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    transition: background-color 0.15s ease;
+}
+
+.stButton > button:not([kind="primary"]):hover {
+    background-color: #EBF4FC !important;
+}
+
+/* ── Metric widget ─────────────────────────────────────────────────────────── */
+[data-testid="metric-container"] {
+    background-color: #F0F4F8;
+    border-radius: 8px;
+    border-left: 4px solid #509EE3;
+    padding: 1rem 1.25rem;
+}
+
+[data-testid="stMetricValue"] {
+    color: #509EE3 !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #4C5773 !important;
+    font-weight: 600 !important;
+}
+
+/* ── Alerts / banners ──────────────────────────────────────────────────────── */
+[data-testid="stAlert"][data-baseweb="notification"] {
+    border-radius: 6px !important;
+}
+
+/* Success */
+div[data-testid="stAlert"].st-ae {
+    border-left: 4px solid #84BB4C !important;
+    background-color: #F2F9EA !important;
+}
+
+/* Error */
+div[data-testid="stAlert"].st-af {
+    border-left: 4px solid #ED6E6E !important;
+}
+
+/* Spinner text */
+.stSpinner > div > div {
+    border-top-color: #509EE3 !important;
+}
+
+/* ── Code blocks ───────────────────────────────────────────────────────────── */
+.stCode, .stCodeBlock, pre, code {
+    background-color: #F0F4F8 !important;
+    border: 1px solid #E8EDEE !important;
+    border-radius: 6px !important;
+    color: #2D3748 !important;
+}
+
+/* ── Dividers & borders ────────────────────────────────────────────────────── */
+hr {
+    border-color: #E8EDEE !important;
+}
+
+/* ── Sidebar (if used) ─────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background-color: #2D3748 !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #FFFFFF !important;
+}
+
+/* ── Column separators ─────────────────────────────────────────────────────── */
+[data-testid="column"] {
+    border-right: none;
+}
+
+/* ── Bold inline labels (used in render_output) ────────────────────────────── */
+strong {
+    color: #2D3748 !important;
+}
+</style>
+"""
+
 
 def get_secret(name: str, default: str = "") -> str:
     try:
@@ -364,9 +537,9 @@ Tasks:
 
 4. Determine ICP fit score from 1 to 4:
 
-- 1 = weak fit  
-- 2 = possible fit  
-- 3 = good fit (strong ICP but unclear Metabase-specific problem)  
+- 1 = weak fit
+- 2 = possible fit
+- 3 = good fit (strong ICP but unclear Metabase-specific problem)
 - 4 = strong fit (strong ICP + clear or emerging Metabase-relevant problem)
 
 5. Explain ICP reasoning.
@@ -457,8 +630,8 @@ Valid triggers include:
 
 SCORING BEHAVIOR:
 
-- 3 = strong company, unclear Metabase-specific need  
-- 4 = strong company + clear or emerging Metabase-relevant problem  
+- 3 = strong company, unclear Metabase-specific need
+- 4 = strong company + clear or emerging Metabase-relevant problem
 
 - Do NOT require urgency for a 4
 - Do NOT downgrade simply because the trigger is gradual
@@ -509,13 +682,13 @@ Tone:
 - observational, not assumptive
 
 CTA examples:
-- “happy to share more if helpful”
-- “curious if this is relevant”
-- “can send an example if useful”
+- "happy to share more if helpful"
+- "curious if this is relevant"
+- "can send an example if useful"
 
 Email focus:
-- email_a → speed and ease of getting answers from data  
-- email_b → consistency and clarity in reporting  
+- email_a → speed and ease of getting answers from data
+- email_b → consistency and clarity in reporting
 
 ---
 
@@ -767,6 +940,11 @@ def render_output(result: Dict[str, Any]) -> None:
 
 def main() -> None:
     st.set_page_config(page_title=APP_TITLE, layout="wide")
+
+    # ── Apply Metabase brand theme ──────────────────────────────────────────
+    st.markdown(METABASE_CSS, unsafe_allow_html=True)
+    # ───────────────────────────────────────────────────────────────────────
+
     st.title(APP_TITLE)
     st.caption(
         "Enter one account, gather first-party website and public search signals, generate a Metabase-specific brief with Claude, email it to the requester, and log it to Google Sheets."
